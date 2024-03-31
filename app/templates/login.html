@@ -1,12 +1,48 @@
 <!DOCTYPE html>
-<html>
-    <head></head>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="/static/style.css">
+        
+    </head> 
     <body>
-        <h1>{{name}}</h1>
-        <!-- <form action="http://localhost:5000/login" method="post">
-            <p>Enter Your Name</p>
-            <p><input type="text" name="nm" placeholder="Enter Name"></p>
-            <p><input type="submit" value="Login"></p>
-        </form> -->
-    </body>
+        <div class="container">
+            <div >
+                <h1 class = "header_text">Do you wanna go out with me?</h1>
+                <h1 class = "header_text">Are you free tommorow?</h1>
+            </div>
+            <div class="gif_container">
+                <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExcDdtZ2JiZDR0a3lvMWF4OG8yc3p6Ymdvd3g2d245amdveDhyYmx6eCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/cLS1cfxvGOPVpf9g3y/giphy.gif" alt="Cute animated illustration">
+            </div>
+            <form method="POST">
+                <div class = "buttons">
+                    <button class="btn" id = "yesButton">Yes</button>
+                    <!-- <button class="btn" id="noButton" onmouseover="moveButton()" onclick="moveButton()">No</button> -->
+            </form>
+            
+                <!-- <script>
+                    function nextPage() {
+                        window.location.href = "127.0.0.1:5000/yes.html";
+                    }
+                    
+                    function moveButton() {
+                        var x = Math.random() * (window.innerWidth - document.getElementById('noButton').offsetWidth) - 85;
+                        var y = Math.random() * (window.innerHeight - document.getElementById('noButton').offsetHeight) - 48;
+                        document.getElementById('noButton').style.left = `${x}px`;
+                        document.getElementById('noButton').style.top = `${y}px`;
+                    } -->
+                    <!-- // document.getElementById('yesButton').addEventListener('click', function() {
+                    //     fetch('/yes_response', {
+                    //         method: 'GET'
+                    //     })
+                    //     .then(response => response.json())
+                    //     .then(data => {
+                    //         document.getElementById('apiResponse').innerText = JSON.stringify(data);
+                    //     })
+                    //     .catch(error => console.error('Error:', error));
+                    // }); -->
+                </script> 
+            </div>
+        </div>
+       
+    </body> 
 </html>

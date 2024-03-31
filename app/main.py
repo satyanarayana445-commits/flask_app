@@ -5,9 +5,16 @@ app=Flask(__name__)
 def my_work(name):
     return 'successfully loged in {}'.format(name)
 
-@app.route('/login/<user>')
-def login(user):
-    return render_template('login.html',name=user)
+@app.route('/request', methods=['GET', 'POST'])
+def login():
+    if request.method == "POST":
+        print("lll")
+        return redirect(url_for('yes_request'))
+        # return render_template('yes.html')
+    return render_template('login.html')
+@app.route('/yes_request')
+def yes_request():
+    return render_template('yes.html')
     # if request.method=='POST':
     #     user = request.form['nm']
     #     return redirect(url_for('my_work',name=user))
@@ -16,13 +23,6 @@ def login(user):
     #     return redirect(url_for('my_work',name=user))
 
 
-    
-# @app.route('/hello/<name>')
-# def hello_world(name):
-#     if name=='admin':
-#         return redirect(url_for('my_work'))
-#     else:
-#         return 'hello world {}'.format(name)
 
 if __name__=='__main__':
     app.run(debug=True)
